@@ -1,0 +1,102 @@
+.header {
+	color: #43263E; 
+        text-align: center; 
+        font-size: 22px; 
+        background-color: #FFFFFF;
+}
+
+.footer {
+	color: #7F0000; 
+        text-align: center; 
+        font-size: 16px;
+        padding-top: 20px;
+}
+
+.body {
+    font-family: sans-serif,Arial,Verdana,Tahoma;
+}
+
+.menubar {
+    background-color: #E8E8E8;
+    height: 50px;
+    margin: 15px;
+    text-align: center;    
+}
+
+.login {
+        border-top: #313f8a 1px solid; 
+        border-left: #313f8a 1px solid; 
+	border-right: #313f8a 2px solid; 
+        border-bottom: #313f8a 2px solid;
+        width: 380px;
+        height: 32px;
+        font-size: 16pt;
+}
+
+.boxlogin {
+        margin: 0 auto;
+        border-style:dashed; 
+        width:500px; 
+}
+
+.formlogin {
+        margin: 60px;
+}
+
+.boxtitle {
+        font-size: 30px;
+        color: #7F0000;
+        text-align: center;
+}
+
+.boxmessage {
+        padding-left: 0;
+        text-align: center;
+        padding-bottom: 30px;    
+}
+
+p {
+	color: #000000; 
+        font-size: 14pt; 
+        text-align: left;
+}
+
+a {
+	color: #4ba6b3; 
+        font-size: 14pt; 
+        text-decoration: none;
+}
+
+.button {
+        height: 40pt;
+        font-size: 22pt;
+        font-family: Arial,Verdana,Tahoma;
+        padding: 4px 20px 4px 20px;
+        font-weight: bold;
+        cursor: pointer;
+        background: #225489;
+        color: #fff;
+        border: none;
+}
+.button:hover {
+        background: #003c6e;
+        border: 1px solid #225489
+}
+
+/*** CLASSI PER DEFINIRE GRANDEZZA IMMAGINI ***/
+.img_100_100 {
+        height: 100px;
+        width: 100px;
+}
+
+.avatar {
+        height: 60px;
+        width: 60px;
+        margin: 10px;
+        border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);        
+}
