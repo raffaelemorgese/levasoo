@@ -30,6 +30,16 @@
     <div style="text-align:center">
       <img src="../view/box/img/login1.png" />
     </div>
+  
+    <div style="text-align:center;">
+      <a href="fbuserlogin">
+          <img src="../view/box/img/fb.png" class="img_48_48" title="Login con Facebook"/>
+      </a>
+    
+      <a href="gouserlogin">
+          <img src="../view/box/img/go.png" class="img_48_48" title="Login con Google"/>
+      </a>
+    </div>
     
     <div class="formlogin">
       <form id="frmLogin" name="Login" action="userlogin" method="POST" >
@@ -47,7 +57,7 @@
       <div>
           <br/>
           <br/>
-          <a href="./newuser">Nuovo utente</a> | <a href="./forgotpwd">Recupero password</a>
+          <a href="./newuser">Nuovo utente</a> | <a href="./forgotpwd">Recupera password</a>
       </div>
     </div>
     <?php } ?>
