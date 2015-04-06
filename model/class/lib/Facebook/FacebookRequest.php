@@ -21,12 +21,6 @@
  * DEALINGS IN THE SOFTWARE.
  *
  */
-namespace Facebook;
-
-use Facebook\HttpClients\FacebookHttpable;
-use Facebook\HttpClients\FacebookCurlHttpClient;
-use Facebook\HttpClients\FacebookStreamHttpClient;
-
 /**
  * Class FacebookRequest
  * @package Facebook

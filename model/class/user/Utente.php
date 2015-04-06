@@ -10,16 +10,17 @@
  * @author user
  */
 class Utente {
-    private     $id;
-    private     $nome;
-    private     $cognome;
-    private     $email;
-    private     $username;
-    private     $password;
-    private     $lastlogin;
-    private     $autenticato;
-    private     $access;
-
+    protected         $id;
+    protected         $nome;
+    protected         $cognome;
+    protected         $email;
+    protected         $username;
+    protected         $password;
+    protected         $lastlogin;
+    protected         $autenticato;
+    protected         $access;
+    protected         $avatarUrl;
+    
     public function  __construct($id=0)
     {
         $this->id = $id;
@@ -28,6 +29,7 @@ class Utente {
         $this->email = "";
         $this->username = "";
         $this->password = "";
+        $this->avatarUrl = '../view/box/img/avatar.png';
         $this->setAutenticated(false);
         $this->access = new Access();
     }
@@ -185,8 +187,12 @@ class Utente {
         return $dbAcc->update($query);
     }
  
-    public function getAvatarImage() {
-      return '../view/box/img/avatar.png';
+    public function setAvatarUrl($avatarurl) {
+      $this->avatarUrl = $avatarurl;
+    }
+
+    public function getAvatarUrl() {
+      return $this->avatarUrl;
     }
 }
 ?>

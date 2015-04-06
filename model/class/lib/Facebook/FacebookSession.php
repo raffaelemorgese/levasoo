@@ -21,11 +21,6 @@
  * DEALINGS IN THE SOFTWARE.
  *
  */
-namespace Facebook;
-
-use Facebook\Entities\AccessToken;
-use Facebook\Entities\SignedRequest;
-
 /**
  * Class FacebookSession
  * @package Facebook

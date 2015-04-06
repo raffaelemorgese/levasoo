@@ -21,8 +21,6 @@
  * DEALINGS IN THE SOFTWARE.
  *
  */
-namespace Facebook;
-
 /**
  * Class FacebookRedirectLoginHelper
  * @package Facebook

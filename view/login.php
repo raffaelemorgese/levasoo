@@ -8,7 +8,7 @@
       ?>
     <div class="formlogin">
         <div style="text-align:center;">
-            <img src="<?php echo $utente->getAvatarImage();?>" class="avatar" />
+            <img src="<?php echo $utente->getAvatarUrl();?>" class="avatar" />
         </div>
         <div class="boxtitle">
     <?php
@@ -32,11 +32,11 @@
     </div>
   
     <div style="text-align:center;">
-      <a href="fbuserlogin">
+      <a href="userfblogin">
           <img src="../view/box/img/fb.png" class="img_48_48" title="Login con Facebook"/>
       </a>
     
-      <a href="gouserlogin">
+      <a href="usergologin">
           <img src="../view/box/img/go.png" class="img_48_48" title="Login con Google"/>
       </a>
     </div>
