@@ -22,7 +22,7 @@ class UserGoLogin extends Command {
     $client->setApplicationName('ITUK-Cinderella');
     $client->setClientId('1047071962553-peio8aua5ac0a17s11a116thcr77ag4m.apps.googleusercontent.com');
     $client->setClientSecret('d-XWxzPq11ZrDsh0RsbgFc9k');
-    $client->setRedirectUri('http://www.ituk.it/cinderella/gologin');
+    $client->setRedirectUri('http://www.ituk.it/cinderella/it/gologin');
     $client->setApprovalPrompt('auto');
     $client->setAccessType('offline');
     $oauth2 = new Google_Oauth2Service($client);
