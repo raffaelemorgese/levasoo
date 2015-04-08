@@ -8,7 +8,7 @@
       ?>
     <div class="formlogin">
         <div style="text-align:center;">
-            <img src="<?php echo $utente->getAvatarUrl();?>" class="avatar" />
+            <img src="<?php echo $utente->getAvatarUrl();?>" class="avatar img_60_60" />
         </div>
         <div class="boxtitle">
     <?php
@@ -18,6 +18,9 @@
         </div>
         <p>
             <a href="./loaduser">Modifica profilo</a>    
+        </p>
+        <p>
+            <a href="../team/viewallteam">Visualizza team</a>    
         </p>
         <p>
             <a href="./userlogout">Logout</a>    

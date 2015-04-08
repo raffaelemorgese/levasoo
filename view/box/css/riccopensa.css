@@ -62,9 +62,17 @@ p {
 }
 
 a {
-	color: #4ba6b3; 
+	color: #3C828C; 
         font-size: 14pt; 
         text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .button {
@@ -78,15 +86,17 @@ a {
         color: #fff;
         border: none;
 }
+
 .button:hover {
         background: #003c6e;
-        border: 1px solid #225489
+        border: 1px solid #225489;
+        color: #fff;
 }
 
 /*** CLASSI PER DEFINIRE GRANDEZZA IMMAGINI ***/
-.img_100_100 {
-        height: 100px;
-        width: 100px;
+.img_36_36 {
+        height: 36px;
+        width: 36px;
 }
 
 .img_48_48 {
@@ -94,9 +104,17 @@ a {
         width: 48px;
 }
 
-.avatar {
+.img_60_60 {
         height: 60px;
         width: 60px;
+}
+
+.img_100_100 {
+        height: 100px;
+        width: 100px;
+}
+
+.avatar {
         margin: 10px;
         border-radius: 150px;
 	-webkit-border-radius: 150px;

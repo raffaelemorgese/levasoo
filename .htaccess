@@ -7,6 +7,7 @@ RewriteBase /
 ###   CL rules - BEGIN   ###
 ############################
   RewriteRule ^user                                 riccopensa/controller/Controller.php [L]
+  RewriteRule ^team                                 riccopensa/controller/Controller.php [L]
   RewriteRule ^api                                  riccopensa/controller/Controller.php [L]
 ############################
 ###   CL rules - END     ###
