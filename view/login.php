@@ -17,7 +17,7 @@
     ?>
         </div>
         <p>
-            <a href="./loaduser">Modifica profilo</a>    
+            <a href="./loaduser" class="fancybox fancybox.iframe" >Modifica profilo</a>    
         </p>
         <p>
             <a href="../team/viewallteam">Visualizza team</a>    
