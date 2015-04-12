@@ -1,6 +1,4 @@
-    <div class="footer">
-      &reg; Copyright - RiccoPensa - Tutti i diritti riservati.
-    </div>  
+
     <!-- FANCYBOX -->
       <script type="text/javascript">
         $(document).ready(function() {

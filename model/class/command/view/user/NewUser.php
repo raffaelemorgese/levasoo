@@ -11,6 +11,7 @@ class NewUser extends Viewer {
   }
 
   protected function action() {
+    $this->showContentOnly = TRUE;
     $this->pageToView = "newuser";
     parent::action();
   }  

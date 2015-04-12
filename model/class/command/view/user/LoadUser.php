@@ -11,6 +11,7 @@ class LoadUser extends Viewer {
   }
 
   protected function action() {
+    $this->showContentOnly = TRUE;
     $this->pageToView = "loaduser";
     parent::action();
   }  

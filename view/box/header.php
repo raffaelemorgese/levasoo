@@ -43,6 +43,3 @@
     </head>
 
     <body class="body">
-      <div class="menubar">
-          
-      </div>
