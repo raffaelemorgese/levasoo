@@ -94,6 +94,11 @@ a:hover {
 }
 
 /*** CLASSI PER DEFINIRE GRANDEZZA IMMAGINI ***/
+.img_16_16 {
+        height: 16px;
+        width: 16px;
+}
+
 .img_36_36 {
         height: 36px;
         width: 36px;

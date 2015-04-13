@@ -4,7 +4,8 @@
 <div class="container">
 
   <ul>
-    <li><a href="#"> <img src="<?php print $utente->getAvatarUrl();?>" class="avatar img_36_36" /> Level 1 </a>
+    <li><a href="#"><img src="<?php print $utente->getAvatarUrl();?>" class="avatar img_36_36" /> Level 1 </a> 
+      <?php $id = 100; $pname = 'raffaele'; $psrnm = 'morgese'; include 'panelmanageuser.php'; ?>  
       <ul>
         <li><a href="#"> <img src="<?php print $utente->getAvatarUrl();?>" class="avatar img_36_36" /> Level 1.1 </a>
           <ul>
