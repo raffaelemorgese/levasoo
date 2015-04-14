@@ -5,15 +5,24 @@
  * @author biab
  */
 class UriDispatch {
-  private $arrUri = array();
   
-  public function __construct($uri) {
-    $this->arrUri = explode('/', ltrim($uri,'/'.ROOT_SITO.'/'));
+  public static function getUriDispatch() {
+    $arrUri = array();
+    $reqUri = $_SERVER['REQUEST_URI'];
+    $arrUri = explode('/', ltrim($reqUri,'/'.ROOT_SITO.'/'));
+    return $arrUri;
   }
   
-  public function getUriDispatch()
-  {
-    return $this->arrUri;
+  public static function getBaseUri() {
+    $baseUri = $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['SERVER_NAME'].'/'.ROOT_SITO.'/';
+    return $baseUri;
   }
   
+  public static function redirectToLocation($uri) {
+    return header('Location: '.self::getBaseUri().$uri);
+  }
+  
+  public static function getFullUri($uri) {
+    return self::getBaseUri().$uri;
+  }
 }

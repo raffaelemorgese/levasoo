@@ -17,15 +17,14 @@
     file_exists($filename)?require_once $filename:loadResouce($res, $idx+1);
   }
   //***
-  $uri = new UriDispatch($_SERVER['REQUEST_URI']);
-  $uriPath = $uri->getUriDispatch();
-  $uriCommand = $uriPath[count($uriPath) - 1];
-  !(class_exists($uriCommand, TRUE)) && header('Location: ../user/login');
+  $uriPath = UriDispatch::getUriDispatch();
+  $uriCommand = $uriPath[1];
+  !(class_exists($uriCommand, TRUE)) && UriDispatch::redirectToLocation('user/login');
   //*** REFLECTION BY VARIABLE VALUE ***
   $command = new $uriCommand();
   $command->setUriPath($uriPath);
   $command->isAuth() && $command->execute();
-  !is_null($command->getRedirect()) && header("Location: ".$command->getRedirect());
+  !is_null($command->getRedirect()) && UriDispatch::redirectToLocation($command->getRedirect());
   //***
   exit;
 ?>
