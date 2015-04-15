@@ -2,11 +2,14 @@
 <div class="boxlogin">
     <br/>
     <div class="boxtitle">
-      NUOVO UTENTE
+      NUOVO CONSULENTE
     </div>
 
     <div class="formlogin">
-      <form id="frmNewUser" name="Login" action="usersave" method="POST">
+        <div class="boxtitle boxsponsor">
+          Sponsor: {SNIPPET::sponsor}  
+        </div>
+        <form id="frmNewUser" name="Login" action="usersave" method="POST">
           <p>
               * Nome:<br/>
               <input type="text" name="nome" value="" size="40" class="login required"/>
