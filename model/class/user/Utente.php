@@ -29,7 +29,7 @@ class Utente {
         $this->email = "";
         $this->username = "";
         $this->password = "";
-        $this->avatarUrl = '../view/box/img/avatar.png';
+        $this->avatarUrl = UriDispatch::getBaseUri().'view/box/img/avatar.png';
         $this->setAutenticated(false);
         $this->access = new Access();
     }
@@ -111,7 +111,7 @@ class Utente {
        $dbQuery = " SELECT id, nome, cognome, email ";
        $dbQuery.= " FROM   utenti ";
        $dbQuery.= " WHERE  username = '".$this->username."' ";
-       $dbQuery.= " AND    password = '".base64_encode($this->password)."' ";
+       $dbQuery.= " AND    password = '".self::encode($this->password)."' ";
        //***
        //Verifica autenticazione utente
        $risult = $dbAcc->select($dbQuery);
@@ -141,7 +141,7 @@ class Utente {
         $query .= "'".$this->cognome."', ";
         $query .= "'".$this->email."', ";
         $query .= "'".$this->username."', ";
-        $query .= "'".base64_encode($this->password)."') ";
+        $query .= "'".self::encode($this->password)."') ";
         //***
         $this->id = $dbAcc->insert($query);
         return $this->id;
@@ -155,7 +155,7 @@ class Utente {
         $query .= " cognome = '".$this->cognome."', ";
         $query .= " email = '".$this->email."', ";
         $query .= " username = '".$this->username."', ";
-        $query .= " password = '".base64_encode($this->password)."' ";
+        $query .= " password = '".self::encode($this->password)."' ";
         $query .= " WHERE ";
         $query .= " id = ".$this->id;
         //***
@@ -171,7 +171,7 @@ class Utente {
        $dbQuery.= " WHERE  email = '".$this->email."' ";
        //***
        $risult = $dbAcc->select($dbQuery);
-       return $risult?base64_decode($risult[0]['password']):'';
+       return $risult?self::decode($risult[0]['password']):'';
     }
 
     private function setLoginTime() 
@@ -193,6 +193,18 @@ class Utente {
 
     public function getAvatarUrl() {
       return $this->avatarUrl;
+    }
+    
+    public static function getDefaultAvatarUrl() {
+      return UriDispatch::getBaseUri().'view/box/img/avatar.png';
+    }
+    
+    public static function encode($data) {
+      return base64_encode($data);
+    }
+
+    public static function decode($data) {
+      return base64_decode($data);
     }
 }
 ?>

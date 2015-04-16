@@ -7,7 +7,7 @@
 
     <div class="formlogin">
         <div class="boxtitle boxsponsor">
-          Sponsor: {SNIPPET::sponsor}  
+          Sponsor: <img src="{SNIPPET::avatar}" class="avatar img_36_36" /> {SNIPPET::sponsor}  
         </div>
         <form id="frmNewUser" name="Login" action="usersave" method="POST">
           <p>

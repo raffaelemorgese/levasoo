@@ -18,8 +18,8 @@ class Viewer extends Command {
     $this->showContentOnly = $val;
   }
   
-  public function setParameters($params = array()) {
-    $this->parameters = $params;
+  public function addParameter($name, $value) {
+    $this->parameters[$name] = $value;
   }
   
   protected function action() {
