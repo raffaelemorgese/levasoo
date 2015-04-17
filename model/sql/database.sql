@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS `utenti` (
   `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `lastlogin` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP  
+  `lastlogin` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `parent` int(11) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 ALTER TABLE `utenti`

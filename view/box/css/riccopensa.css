@@ -138,3 +138,16 @@ a:hover {
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);        
 }
+
+.paneluser {
+  opacity: 0.2;
+}
+
+.paneluser:hover {
+  opacity: 1;
+}
+
+.hasLeftborder {
+    border-left: 1px solid grey;
+    margin-top: 15px;
+}
