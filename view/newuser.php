@@ -9,7 +9,8 @@
         <div class="boxtitle boxsponsor">
           Sponsor: <img src="{SNIPPET::avatar}" class="avatar img_36_36" /> {SNIPPET::sponsor}  
         </div>
-        <form id="frmNewUser" name="Login" action="usersave" method="POST">
+        <form id="frmNewUser" name="Login" action="<?php echo UriDispatch::getFullUri("user/usersave");?>" method="POST">
+          <input type="hidden" name="parent" value="{SNIPPET::parent}" />
           <p>
               * Nome:<br/>
               <input type="text" name="nome" value="" size="40" class="login required"/>

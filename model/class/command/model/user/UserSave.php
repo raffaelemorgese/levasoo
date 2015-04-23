@@ -12,8 +12,9 @@ class UserSave extends Command {
   protected function action() {
     //Autenticazione Utente
     $user = new Utente();
-    $user->setNome(mysql_real_escape_string($_POST['nome']));
-    $user->setCognome(mysql_real_escape_string($_POST['cognome']));
+    $user->setParent(mysql_real_escape_string($_POST['parent']));
+    $user->setNome(mysql_real_escape_string(ucfirst($_POST['nome'])));
+    $user->setCognome(mysql_real_escape_string(ucfirst($_POST['cognome'])));
     $user->setEmail(mysql_real_escape_string($_POST['email']));
     $user->setUsername(mysql_real_escape_string($_POST['username']));
     $user->setPassword(mysql_real_escape_string($_POST['password']));
@@ -35,7 +36,7 @@ class UserSave extends Command {
     else
       Session::setObj(Session::SYSMSG, 'Tutti i campi sono obbligatori. Inserimento utente fallito.');
     //***
-    $this->redirect = "message";
+    $this->redirect = "user/message";
   }  
     
     

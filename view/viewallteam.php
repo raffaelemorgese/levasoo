@@ -25,37 +25,7 @@
           echo $js1.$basestring; include 'panelmoduser.php'; include 'paneladduser.php'; 
           echo '</li><ul id="'.$t['id'].'_ul"></ul>\');});</script>';
         }?>    
-          
-        
-          
-          
-        <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.1 </a>
-          <ul>
-            <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.1.1 </a>
-              <ul>
-                <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2.1 </a></li>
-                <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2.2 </a></li>
-                <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2.3 </a></li>
-                <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2.4 </a></li>
-              </ul>
-                
-            <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.1.2 </a></li>
-            <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.1.3 </a></li>
-            <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.1.4 </a></li>
-          </ul>
-        </li>
-        <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2 </a>
-          <ul>
-            <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2.1 </a></li>
-            <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2.2 </a></li>
-          </ul>
-          <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2 </a>
-            <ul>
-              <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2.3 </a></li>
-              <li><a href="#"> <img src="" class="avatar img_36_36" /> Level 1.2.4 </a></li>
-            </ul>
-          </li>
-        </li>
+        <li style="display:none">
       </ul>
     </li>
   </ul>
