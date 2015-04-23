@@ -1,1 +1,0 @@
-<div style="display:inline-block;" class="paneluser"><a href="../user/loaduser/<?php echo $id;?>" class="fancybox fancybox.iframe"><img src="../view/box/img/mod.png" class="img_24_24" title="Aggiorna consulente"/></a></div>

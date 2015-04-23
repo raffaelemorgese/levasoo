@@ -8,6 +8,7 @@ class Session {
   const UTENTE                            = 'utente';
   const SYSMSG                            = 'sysmsg';
   const TOKEN                             = 'token';
+  const NETWORKER                         = 'networker';
 
   public static function setObj($label, $obj) {
     $_SESSION[$label] = serialize($obj);

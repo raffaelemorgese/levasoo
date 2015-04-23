@@ -25,7 +25,7 @@ class UserUpdate extends Command {
     else
       Session::setObj(Session::SYSMSG, "Aggiornamento utente fallito.");
     //***
-    $this->redirect = "message";
+    $this->redirect = "user/message";
   }  
     
     
