@@ -29,7 +29,7 @@ class UserLogin extends Command {
       else
         Session::setObj(Session::SYSMSG, 'Username/Password non inseriti. Login fallito.');
       //***
-      $this->redirect = "message";
+      $this->redirect = "user/message";
     }  
     
     

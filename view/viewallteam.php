@@ -15,14 +15,14 @@
         foreach ($rteam as $t) {
           $basestring='<li id="'.$t['id'].'" class="hasSubmenu"><a href="#" class="toogle"><img src="'.$utente->getAvatarUrl().'" class="avatar img_36_36" />'.$t['cognome'].' '.$t['nome'].'</a>';
           $id = $t['id']; $pname = $t['nome']; $psrnm = $t['cognome']; $pavatar = Utente::encode($utente->getAvatarUrl()); 
-          echo $basestring; include 'panelmodntwrkr.php'; include 'paneladdntwrkr.php'; 
+          echo $basestring; include 'panelmodntwrkr.php'; include 'paneladdntwrkr.php'; include 'paneladdntwrkrsale.php'; 
           echo '<ul id="'.$t['id'].'_ul"></ul></li>';
         }   
         foreach ($nrteam as $t) {
           $basestring='<li id="'.$t['id'].'_li" class="hasSubmenu hasLeftborder"><a href="#" class="toogle"><img src="'.$utente->getAvatarUrl().'" class="avatar img_36_36" />'.$t['cognome'].' '.$t['nome'].'</a>';
           $id = $t['id']; $pname = $t['nome']; $psrnm = $t['cognome']; $pavatar = Utente::encode($utente->getAvatarUrl()); 
           $js1 = '<script type="text/javascript"> $(document).ready(function() {$("#'.$t['parent'].'_ul").append(\'';
-          echo $js1.$basestring; include 'panelmodntwrkr.php'; include 'paneladdntwrkr.php'; 
+          echo $js1.$basestring; include 'panelmodntwrkr.php'; include 'paneladdntwrkr.php'; include 'paneladdntwrkrsale.php';
           echo '</li><ul id="'.$t['id'].'_ul"></ul>\');});</script>';
         }?>    
         <li style="display:none">

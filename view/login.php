@@ -60,7 +60,8 @@
       <div>
           <br/>
           <br/>
-          <a href="./newuser">Nuovo utente</a> | <a href="./forgotpwd">Recupera password</a>
+          <a href="<?php echo UriDispatch::getFullUri('user/newuser/0/non/applicabile/'.Utente::encode(Utente::getDefaultAvatarUrl()));?>">Nuovo utente</a> | 
+          <a href="<?php echo UriDispatch::getFullUri('user/forgotpwd');?>">Recupera password</a>
       </div>
     </div>
     <?php } ?>

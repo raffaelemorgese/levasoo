@@ -141,10 +141,12 @@ a:hover {
 
 .paneluser {
   opacity: 0.2;
+  display: inline-block;
 }
 
 .paneluser:hover {
   opacity: 1;
+  display: inline-block;
 }
 
 .hasLeftborder {

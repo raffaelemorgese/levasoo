@@ -14,7 +14,7 @@ class UserLogout extends Command {
     Session::destroyObj(Session::UTENTE);
     Session::setObj(Session::SYSMSG, "Logout eseguito correttamente.");
     //***
-    $this->redirect = "message";
+    $this->redirect = "user/message";
   }  
     
 }
