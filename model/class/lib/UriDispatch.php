@@ -18,6 +18,11 @@ class UriDispatch {
     return $baseUri;
   }
   
+  public static function getBaseDir() {
+    $baseUri = $_SERVER['DOCUMENT_ROOT'].'/'.ROOT_SITO.'/';
+    return $baseUri;
+  }
+  
   public static function redirectToLocation($uri) {
     return header('Location: '.self::getBaseUri().$uri);
   }

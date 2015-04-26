@@ -8,6 +8,7 @@
   define("BASE_PARENT_ROOT",                        0);
   define("BASE_DATE_FORMAT",                        "Y-m-d");
   define("BASE_DATETIME_FORMAT",                    "Y-m-d H:i:s");
+  define("BASE_AVATAR_ID",                          0);
   
   
   

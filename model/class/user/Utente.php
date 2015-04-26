@@ -31,7 +31,7 @@ class Utente {
         $this->username = "";
         $this->password = "";
         $this->parent = NULL_PARENT_ROOT;
-        $this->avatarUrl = UriDispatch::getBaseUri().'view/box/img/avatar.png';
+        $this->avatarUrl = UriDispatch::getBaseUri().'user/useravatar/'.$id;
         $this->setAutenticated(false);
         $this->access = new Access();
         if ($this->id===0) return;
@@ -223,11 +223,15 @@ class Utente {
     }
 
     public function getAvatarUrl() {
-      return $this->avatarUrl;
+      return UriDispatch::getBaseUri().'user/useravatar/'.$this->id;
+    }
+    
+    public static function getAvatarUrlById($id) {
+      return UriDispatch::getBaseUri().'user/useravatar/'.$id;
     }
     
     public static function getDefaultAvatarUrl() {
-      return UriDispatch::getBaseUri().'view/box/img/avatar.png';
+      return UriDispatch::getBaseUri().'user/useravatar/0';
     }
     
     public static function encode($data) {
