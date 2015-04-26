@@ -22,7 +22,7 @@
         <script src="<?php echo UriDispatch::getBaseUri(); ?>view/box/lib/alertify/lib/alertify.min.js"></script>
         <!-- ALERTIFY -->
         <!-- MULTINESTEDLIST -->
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
         <link rel="stylesheet" href="<?php echo UriDispatch::getBaseUri(); ?>view/box/lib/multinestedlist/style.css" />
         <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />

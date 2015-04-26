@@ -6,7 +6,9 @@
   define("NON_APPLICABILE",                         "Non applicabile");
   define("NULL_PARENT_ROOT",                        -1);
   define("BASE_PARENT_ROOT",                        0);
-
+  define("BASE_DATE_FORMAT",                        "Y-m-d");
+  define("BASE_DATETIME_FORMAT",                    "Y-m-d H:i:s");
+  
   
   
 ?>

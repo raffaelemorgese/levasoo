@@ -1,5 +1,5 @@
 
-<div class="boxlogin">
+<div class="boxlogin shadow">
   <br/>
   <?php
     //Controlla utente loggato

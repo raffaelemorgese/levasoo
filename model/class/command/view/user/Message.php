@@ -6,6 +6,7 @@
  */
 class Message extends Viewer {
   protected function action() {
+    $this->showContentOnly = TRUE;
     $this->pageToView = "message";
     parent::action();
   }

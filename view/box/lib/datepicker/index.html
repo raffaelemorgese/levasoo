@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>bits4beats - esempio jQuery UI Datepicker</title>
+	 <meta name="Description" content="Utilizzare jQuery UI Datepicker come widget per la scelta della data" />
+
+    <script language="javascript" type="text/javascript" src="jquery.min.js"></script>
+	 <script type="text/javascript" src="jquery.ui.core.js"></script>
+	 <script type="text/javascript" src="jquery.ui.datepicker.js"></script>
+	 <!-- INCLUDERE LA SEGUENTE LINEA PER LA TRADUZIONE DEL WIDGET IN ITALIANO -->
+    <script type="text/javascript" src="ui.datepicker-it.js"></script>
+
+    <link href="jquery-ui.css" rel="stylesheet" type="text/css" />
+    <!-- SCEGLIERE IL FOGLIO DI STILE DEL TEMA PREFERITO -->
+    <link href="ui.datepicker.css" rel="stylesheet" type="text/css" />
+
+ </head>
+ <body>
+
+	<div id="datepicker">
+		<label>clicca sul campo per aprire il widget</label>
+		<input
+			name="datepicker"
+			id="datepickerId"
+			type="text"
+			maxlength="10"
+			size="10"
+		/>
+   </div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#datepickerId').datepicker({ dateFormat: 'dd/mm/yy' });
+		});
+	</script>
+
+	<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-3345784-8");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+ </body>
+</html>

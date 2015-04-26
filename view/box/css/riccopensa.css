@@ -55,9 +55,9 @@
 }
 
 .boxmessage {
-        padding-left: 0;
+        padding: 50px;
         text-align: center;
-        padding-bottom: 30px;    
+        height: 400px;    
 }
 
 p {
@@ -152,4 +152,10 @@ a:hover {
 .hasLeftborder {
     border-left: 1px solid grey;
     margin-top: 15px;
+}
+
+.shadow {
+    box-shadow: -30px 30px 50px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: -30px 30px 50px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: -30px 30px 50px rgba(0, 0, 0, 0.32);
 }
