@@ -11,6 +11,7 @@ class UserSave extends Command {
 
   protected function action() {
     //Autenticazione Utente
+    $msg = new SysMsg();
     $user = new Utente();
     $user->setParent(mysql_real_escape_string($_POST['parent']));
     $user->setNome(mysql_real_escape_string(ucfirst($_POST['nome'])));
@@ -28,13 +29,13 @@ class UserSave extends Command {
             if ($user->isAutenticated())
               Session::setObj(Session::UTENTE, $user);
             //***
-            Session::setObj(Session::SYSMSG, 'Inserimento utente avvenuto correttamente.');
+            Session::setObj(Session::SYSMSG, $msg->setMessage('Inserimento utente avvenuto correttamente.')->setType(SysMsg::MSG_OK));
         }
         else
-          Session::setObj(Session::SYSMSG, 'Inserimento utente fallito.');
+          Session::setObj(Session::SYSMSG, $msg->setMessage('Inserimento utente fallito.')->setType(SysMsg::MSG_CRITICAL));
     }
     else
-      Session::setObj(Session::SYSMSG, 'Tutti i campi sono obbligatori. Inserimento utente fallito.');
+      Session::setObj(Session::SYSMSG, $msg->setMessage('Tutti i campi sono obbligatori. Inserimento utente fallito.')->setType(SysMsg::MSG_ALERT));
     //***
     $this->redirect = "user/message";
   }  

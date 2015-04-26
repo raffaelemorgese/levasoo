@@ -11,6 +11,7 @@ class UserUpdate extends Command {
 
   protected function action() {
     //Autenticazione Utente
+    $msg = new SysMsg();
     $user = new Utente(Session::getObj(Session::UTENTE)->getId());
     $user->setNome(filter_var($_POST['nome'], FILTER_SANITIZE_STRING));
     $user->setCognome(filter_var($_POST['cognome'], FILTER_SANITIZE_STRING));
@@ -20,12 +21,12 @@ class UserUpdate extends Command {
     if ($user->update())
     {   //Pone in sessione user
       Session::setObj(Session::UTENTE, $user);
-      Session::setObj(Session::SYSMSG, "Utente aggiornato correttamente.");
+      Session::setObj(Session::SYSMSG, $msg->setMessage("Utente aggiornato correttamente.")->setType(SysMsg::MSG_OK));
     }
     else
-      Session::setObj(Session::SYSMSG, "Aggiornamento utente fallito.");
+      Session::setObj(Session::SYSMSG, $msg->setMessage("Aggiornamento utente fallito.")->setType(SysMsg::MSG_CRITICAL));
     //***
-    $this->redirect = "user/message";
+    $this->redirect = "user/fancymessage";
   }  
     
     

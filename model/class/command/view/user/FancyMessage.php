@@ -1,17 +1,18 @@
 <?php
 /**
- * Description of Message
+ * Description of FancyMessage
  *
  * @author biab
  */
-class Message extends Viewer {
+class FancyMessage extends Viewer{
   public function __construct() {
     $this->cluster='user';
     parent::__construct();
   }
   
   protected function action() {
-    $this->addParameter('opacity', '1');
+    $this->addParameter('opacity', '0');
+    $this->showContentOnly = TRUE;
     $this->pageToView = "message";
     parent::action();
   }

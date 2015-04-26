@@ -11,6 +11,7 @@ class SendPwd extends Command {
   
   protected function action() {
     $userMail = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+    $msg = new SysMsg();
     if ($this->checkEmailAddress($userMail))
     {
         $user = new Utente();
@@ -28,13 +29,13 @@ class SendPwd extends Command {
             $mail->setOggetto('Recupero password.');
             $mail->setMessaggio($msg);
             $mail->sendMail();
-            Session::setObj(Session::SYSMSG, 'La password &egrave stata inviata a: '.$userMail);
+            Session::setObj(Session::SYSMSG, $msg->setMessage('La password &egrave stata inviata a: '.$userMail)->setType(SysMsg::MSG_OK));
         }
         else
-          Session::setObj(Session::SYSMSG, 'Spiacente, non siamo riusciti a recuperare la sua password.');
+          Session::setObj(Session::SYSMSG, $msg->setMessage('Spiacente, non siamo riusciti a recuperare la sua password.')->setType(SysMsg::MSG_CRITICAL));
     }
     else
-      Session::setObj(Session::SYSMSG, 'Spiacente, email errata.');
+      Session::setObj(Session::SYSMSG, $msg->setMessage('Spiacente, email errata.')->setType(SysMsg::MSG_ALERT));
     //***
     $this->redirect = "message";
   }  

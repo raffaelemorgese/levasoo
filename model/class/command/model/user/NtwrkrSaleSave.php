@@ -10,6 +10,7 @@ class NtwrkrSaleSave extends Command {
   }
 
   protected function action() {
+    $msg = new SysMsg();
     $sale = new Vendita();
     $sale->setNetworker(mysql_real_escape_string($_POST['idntwrkr']));
     $sale->setDateSale(mysql_real_escape_string($_POST['datepicker']));
@@ -17,12 +18,12 @@ class NtwrkrSaleSave extends Command {
     $sale->setAmount($myamount);
     if ($sale->getNetworker()>0&&$sale->getDateSale()!=''&&$sale->getAmount()>0)
       $sale->save()?
-        Session::setObj(Session::SYSMSG, 'Inserimento nuova vendita avvenuto correttamente.'):
-        Session::setObj(Session::SYSMSG, 'Inserimento nuova vendita fallito.');
+        Session::setObj(Session::SYSMSG, $msg->setMessage('Inserimento nuova vendita avvenuto correttamente.')->setType(SysMsg::MSG_OK)):
+        Session::setObj(Session::SYSMSG, $msg->setMessage('Inserimento nuova vendita fallito.')->setType(SysMsg::MSG_CRITICAL));
     else
-      Session::setObj(Session::SYSMSG, 'Tutti i campi sono obbligatori. Inserimento nuova vendita fallito.');
+      Session::setObj(Session::SYSMSG, $msg->setMessage('Tutti i campi sono obbligatori. Inserimento nuova vendita fallito.')->setType(SysMsg::MSG_CRITICAL));
     //***
-    $this->redirect = "user/message";
+    $this->redirect = "user/fancymessage";
   }  
     
 }
