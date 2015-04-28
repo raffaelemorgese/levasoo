@@ -164,14 +164,15 @@ class Utente {
     {
         $dbAcc = $this->access;
         $query  = " INSERT INTO utenti ( ";
-        $query .= " nome, cognome, email, username, password, parent ";
+        $query .= " nome, cognome, email, username, password, parent, active ";
         $query .= " ) VALUE ( ";
         $query .= "'".$this->nome."', ";
         $query .= "'".$this->cognome."', ";
         $query .= "'".$this->email."', ";
         $query .= "'".$this->username."', ";
         $query .= "'".self::encode($this->password)."', ";
-        $query .= $this->parent.") ";
+        $query .= $this->parent.", ";
+        $query .= "'".VALUE_YES."') ";
         //***
         $this->id = $dbAcc->insert($query);
         return $this->id;

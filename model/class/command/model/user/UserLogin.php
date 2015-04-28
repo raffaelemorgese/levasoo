@@ -11,6 +11,7 @@ class UserLogin extends Command {
 
   protected function action() {
       $msg = new SysMsg();
+      $rdrct = "user/message";
       if ($_POST['username']!="" && $_POST['password']!="")
       {
           //Autenticazione Utente
@@ -23,6 +24,7 @@ class UserLogin extends Command {
           {
             Session::setObj(Session::UTENTE, $user);
             Session::setObj(Session::SYSMSG, $msg->setMessage('Benvenuto '.$user->getNome().' '.$user->getCognome())->setType(SysMsg::MSG_OK)->addParameter('useravatar', $user->getAvatarUrl()));
+            $rdrct = "user/welcome";
           }
           else
             Session::setObj(Session::SYSMSG, $msg->setMessage('Username/Password errati. Login fallito.')->setType(SysMsg::MSG_CRITICAL));
@@ -30,7 +32,7 @@ class UserLogin extends Command {
       else
         Session::setObj(Session::SYSMSG, $msg->setMessage('Username/Password non inseriti. Login fallito.')->setType(SysMsg::MSG_ALERT));
       //***
-      $this->redirect = "user/welcome";
+      $this->redirect = $rdrct;
     }  
     
     

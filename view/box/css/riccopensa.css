@@ -20,7 +20,10 @@
     background-color: #E8E8E8;
     height: 50px;
     margin: 15px;
-    text-align: center;    
+    text-align: left;
+    text-decoration: none;
+    padding-top: 7px;
+    padding-left: 20px;
 }
 
 .login {

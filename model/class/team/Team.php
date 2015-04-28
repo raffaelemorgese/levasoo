@@ -12,7 +12,8 @@ class Team {
   
   public function getAllTeam() {
     $query = " SELECT * ";
-    $query.= " FROM utenti ";
+    $query.= " FROM  utenti ";
+    $query.= " WHERE active = '".VALUE_YES."'";
     $query.= " ORDER BY cognome,parent ASC ";
     $acc = new Access();
     $res = $acc->select($query);
@@ -21,8 +22,9 @@ class Team {
 
   public function getParentRootTeam() {
     $query = " SELECT * ";
-    $query.= " FROM utenti ";
+    $query.= " FROM  utenti ";
     $query.= " WHERE parent = ".BASE_PARENT_ROOT;
+    $query.= " AND   active = '".VALUE_YES."'";
     $query.= " ORDER BY cognome,parent ASC ";
     $acc = new Access();
     $res = $acc->select($query);
@@ -31,8 +33,9 @@ class Team {
 
   public function getNoParentRootTeam() {
     $query = " SELECT * ";
-    $query.= " FROM utenti ";
+    $query.= " FROM  utenti ";
     $query.= " WHERE parent > ".BASE_PARENT_ROOT;
+    $query.= " AND   active = '".VALUE_YES."'";
     $query.= " ORDER BY parent,cognome ASC ";
     $acc = new Access();
     $res = $acc->select($query);
