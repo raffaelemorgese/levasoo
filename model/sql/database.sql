@@ -38,11 +38,19 @@ CREATE TABLE IF NOT EXISTS go_utenti (
 
 CREATE TABLE IF NOT EXISTS `vendite` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `networker` int(11) NOT NULL,
     `datecreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `networker` int(11) NOT NULL,
     `datesale` datetime NOT NULL,
     `amount` float(11) NOT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
+CREATE TABLE IF NOT EXISTS `unilevel` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `datecreated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `level` int(3) NOT NULL,
+    `description` varchar(128) NOT NULL,
+    `commission` float(11) NOT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 

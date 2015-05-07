@@ -18,11 +18,11 @@
 
 .menubar {
     background-color: #E8E8E8;
-    height: 50px;
+    height: 68px;
     margin: 15px;
     text-align: left;
     text-decoration: none;
-    padding-top: 7px;
+    padding-top: 16px;
     padding-left: 20px;
 }
 
@@ -40,6 +40,12 @@
         margin: 0 auto;
         border-style:dashed; 
         width:500px; 
+}
+
+.boxcommonform {
+        margin: 0 auto;
+        border-style:dashed; 
+        width:750px; 
 }
 
 .formlogin {
@@ -101,6 +107,12 @@ a:hover {
         color: #fff;
 }
 
+.buttonimage {
+        background: transparent;
+        border: 0px solid;
+        outline: 0px;     
+}
+
 /*** CLASSI PER DEFINIRE GRANDEZZA IMMAGINI ***/
 .img_16_16 {
         height: 16px;
@@ -140,6 +152,12 @@ a:hover {
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);        
+}
+
+.avatarmenubar {
+    float: right;
+    margin-top: -15px;
+    padding-right: 15px;    
 }
 
 .paneluser {

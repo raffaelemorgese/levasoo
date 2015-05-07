@@ -2,9 +2,10 @@
   session_start();
   include_once '../model/class/lib/Constant.php';
   //*** ELENCO PATH DEI MODULI DI CLASSE ***
-  $CLASSPATH = ['command','lib','user','team',
+  $CLASSPATH = ['command','lib','plan','user','team',
                 'command/api',
-                'command/model/user','command/view/user','command/view/team'];
+                'command/model/user','command/model/plan',
+                'command/view/user','command/view/team','command/view/plan'];
   //***
   spl_autoload_register('privateAutoload');
   function privateAutoload($class_name)
