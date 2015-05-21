@@ -1,0 +1,1 @@
+<div class="paneluser"><a href="../user/addntwrkrsale/<?php echo $id.'/'.$psrnm.'/'.$pname.'/'.$pavatar;?>" class="fancybox fancybox.iframe"><img src="../view/box/img/hide.png" class="img_24_24" title="Blocca consulente"/></a></div>

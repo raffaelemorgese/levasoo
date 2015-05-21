@@ -6,10 +6,15 @@
 }
 
 .footer {
-	color: #7F0000; 
+	color: #7F0000;
         text-align: center; 
         font-size: 16px;
         padding-top: 20px;
+        background-color: #E8E8E8;
+        margin: 100px 15px 0px 15px;
+        position: inherit;
+        bottom: 0px;
+        height: 100%;
 }
 
 .body {

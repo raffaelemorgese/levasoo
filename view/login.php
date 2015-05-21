@@ -1,4 +1,7 @@
 
+<div style="text-align:center;">
+  <img src="<?php echo UriDispatch::getBaseUri();?>view/box/img/levasoo.png" style="height:150px;" />
+</div>
 <div class="boxlogin shadow">
   <br/>
   <?php
