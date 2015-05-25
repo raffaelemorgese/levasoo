@@ -19,15 +19,20 @@
         //*** MENU UTENTE LOGGATO ***
     ?>
         </div>
-        <p>
-            <a href="./loaduser" class="fancybox fancybox.iframe" >Modifica profilo</a>    
-        </p>
-        <p>
-            <a href="../team/viewallteam">Visualizza team</a>    
-        </p>
-        <p>
-            <a href="./userlogout">Logout</a>    
-        </p>
+        <div style="margin:20px;">
+          <p>
+              <a href="./loaduser" class="fancybox fancybox.iframe" >Modifica profilo</a>    
+          </p>
+          <p>
+              <a href="<?php echo UriDispatch::getFullUri('user/adduseravatar');?>" class="fancybox fancybox.iframe" >Immagine profilo</a>    
+          </p>
+          <p>
+              <a href="../team/viewallteam">Visualizza team</a>    
+          </p>
+          <p>
+              <a href="./userlogout">Logout</a>    
+          </p>
+        </div>
     </div>
     <?php
     } else {

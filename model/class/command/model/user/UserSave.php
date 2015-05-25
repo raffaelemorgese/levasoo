@@ -37,7 +37,7 @@ class UserSave extends Command {
     else
       Session::setObj(Session::SYSMSG, $msg->setMessage('Tutti i campi sono obbligatori. Inserimento utente fallito.')->setType(SysMsg::MSG_ALERT));
     //***
-    $this->redirect = "user/message";
+    $this->redirect = "user/fancymessage";
   }  
     
     

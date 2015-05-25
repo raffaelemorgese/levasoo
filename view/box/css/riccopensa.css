@@ -53,6 +53,13 @@
         width:750px; 
 }
 
+.boxaddavatar {
+        margin: 40px auto;
+        border-style: solid; 
+        border-width: thin; 
+        width:220px; 
+}
+
 .formlogin {
         margin: 40px;
 }
@@ -147,6 +154,11 @@ a:hover {
 .img_100_100 {
         height: 100px;
         width: 100px;
+}
+
+.img_200_200 {
+        height: 200px;
+        width: 200px;
 }
 
 .avatar {
